@@ -1,0 +1,158 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap");
+
+:root {
+  --primary-color: #198754; /* Bootstrap Success Green */
+  --secondary-color: #212529; /* Dark */
+  --accent-color: #e9f5ee; /* Light Green Background */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* --- Navbar Modern --- */
+.navbar {
+  transition: all 0.4s ease;
+  padding: 1.5rem 0;
+}
+
+.navbar-scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 0;
+}
+
+.navbar-scrolled .nav-link {
+  color: #333 !important;
+}
+
+.navbar-scrolled .navbar-brand {
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  margin-left: 15px;
+  position: relative;
+}
+
+/* Efek garis bawah saat hover menu */
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Hero Section (Full Screen) --- */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: -80px; /* Menarik ke atas agar di belakang navbar */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* --- Global Section Styling --- */
+section {
+  padding: 80px 0;
+}
+
+.section-bg {
+  background-color: var(--accent-color);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- Card Modern --- */
+.card-hover {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* --- Footer --- */
+footer {
+  background: #111;
+  color: #bbb;
+  padding: 60px 0 20px 0;
+}
+footer h5 {
+  color: white;
+  margin-bottom: 20px;
+}
+footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: var(--primary-color);
+}
